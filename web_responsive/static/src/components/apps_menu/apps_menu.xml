@@ -16,9 +16,7 @@
         <!-- The kanban dropdown is replaced with the odoo default one
         as the default one took physical place in the DOM -->
         <xpath expr="//Dropdown" position="replace">
-            <t t-if="this.ui.isSmall">
-                <t t-call="web.NavBar.AppsMenu.Sidebar" />
-            </t>
+            <t t-if="env.isSmall">
             <t t-else="" />
             <AppsMenu>
                 <t t-set-slot="search_bar">
